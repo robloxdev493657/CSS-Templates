@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A public library of CSS Templates for web development.">
+<title>Free CSS Templates | Template Library</title>
+<style>
+:root{color-scheme:light;--ink:#29241f;--muted:#766b60;--line:#e7d9c7;--bg:#faf4e9;--surface:#fffdf8;--navy:#3b241c;--blue:#a64b2a;--orange:#e6b85c;--pale:#f7e8d7}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}
+a{color:inherit}
+.page{display:grid;grid-template-columns:290px minmax(0,1fr);min-height:100vh}
+.sidebar{background:var(--navy);color:#fff;padding:30px 24px;display:flex;flex-direction:column;position:sticky;top:0;height:100vh}
+.brand{display:flex;align-items:center;gap:12px;font-weight:850;font-size:1.05rem;letter-spacing:-.03em}
+.brand-mark{width:42px;height:42px;display:grid;place-items:center;background:var(--orange);color:#3b241c;border-radius:12px;font-size:1.3rem}
+.side-rule{height:1px;background:#ffffff25;margin:28px 0}
+.side-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.16em;color:#d1bcae;font-weight:800}
+.side-title{font-size:2.25rem;line-height:1.02;letter-spacing:-.06em;margin:17px 0 13px}
+.side-copy{color:#e5d5c8;font-size:.9rem;line-height:1.65;margin:0}
+.side-stats{margin-top:30px;padding:18px 0;border-top:1px solid #ffffff25;border-bottom:1px solid #ffffff25;display:flex;align-items:center;gap:14px}
+.side-stats strong{font-size:3rem;line-height:1;color:var(--orange);letter-spacing:-.08em}
+.side-stats span{font-size:.78rem;line-height:1.45;color:#e5d5c8;text-transform:uppercase;letter-spacing:.08em}
+.side-bottom{margin-top:auto;padding-top:28px;color:#d1bcae;font-size:.78rem;line-height:1.6}
+.content{min-width:0;padding:0 42px 36px}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;border-bottom:1px solid var(--line)}
+.breadcrumb{font-size:.83rem;color:var(--muted)}.breadcrumb strong{color:var(--ink)}
+.top-pill{padding:8px 11px;border-radius:999px;background:var(--pale);color:var(--blue);font-size:.75rem;font-weight:800}
+.hero{padding:36px 0 27px}
+.eyebrow{color:var(--blue);font-size:.75rem;text-transform:uppercase;letter-spacing:.16em;font-weight:900}
+h1{font-size:clamp(2.3rem,4.5vw,4.4rem);letter-spacing:-.075em;line-height:.98;margin:12px 0 13px}
+.hero p{margin:0;color:var(--muted);font-size:1rem;line-height:1.65}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.pill{padding:7px 11px;border:1px solid var(--line);border-radius:6px;background:#fff;color:#4e5a6d;font-size:.78rem;font-weight:700}
+.controls{display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:10px;margin:18px 0 14px}
+input,select{width:100%;padding:14px 15px;border:1px solid #dfcfba;border-radius:8px;background:#fff;color:var(--ink);font:inherit;outline:none}
+input:focus,select:focus{border-color:var(--blue);box-shadow:0 0 0 3px #a64b2a1c}
+.summary{display:flex;justify-content:space-between;align-items:center;gap:15px;margin:0 0 14px;color:var(--muted);font-size:.84rem}
+#count{font-weight:900;color:var(--blue)}
+.grid{display:flex;flex-direction:column;gap:10px}
+.card{display:grid;grid-template-columns:54px minmax(0,1fr) minmax(150px,220px);gap:16px;align-items:center;padding:16px 18px;background:var(--surface);border:1px solid var(--line);border-radius:10px;min-width:0;transition:border-color .15s,transform .15s,box-shadow .15s}
+.card:hover{border-color:#d6a78c;transform:translateX(3px);box-shadow:0 7px 20px #172a4d0a}
+.icon{width:48px;height:48px;display:grid;place-items:center;background:var(--pale);color:var(--blue);border-radius:9px;font-size:1.3rem}
+.card-main{min-width:0}
+.card h2{font-size:1rem;line-height:1.4;margin:0 0 7px;overflow-wrap:anywhere}
+.tag{display:inline-block;background:#f7e8d7;color:#74351f;border-radius:5px;padding:5px 8px;font-size:.7rem;font-weight:800}
+.filename{margin:7px 0 0;color:var(--muted);font-size:.79rem;overflow-wrap:anywhere;line-height:1.45}
+.actions{display:flex;flex-direction:column;gap:7px}
+.btn{display:flex;align-items:center;justify-content:center;text-align:center;text-decoration:none;border-radius:7px;padding:10px 12px;font-size:.78rem;font-weight:850;border:1px solid var(--blue);transition:background .15s,color .15s}
+.btn-view{background:#fffdf8;color:var(--blue)}.btn-download{background:var(--blue);color:#fff}
+.btn-view:hover{background:var(--pale)}.btn-download:hover{background:#7f351f}
+.empty{padding:42px 20px;text-align:center;background:#fffdf8;border:1px dashed #d6c4ad;border-radius:10px;color:var(--muted)}
+.note{margin-top:20px;padding:15px 17px;background:#fff8e7;border:1px solid #f0dfb6;border-left:4px solid var(--orange);border-radius:7px;color:#6b5030;font-size:.85rem;line-height:1.6}
+footer{margin-top:24px;padding:19px 0 0;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
+@media(max-width:1050px){.page{grid-template-columns:230px minmax(0,1fr)}.sidebar{padding:25px 19px}.content{padding:0 25px 30px}.card{grid-template-columns:48px minmax(0,1fr) 150px;gap:12px}}
+@media(max-width:760px){.page{display:block}.sidebar{position:relative;height:auto;padding:20px 22px}.side-rule,.side-title,.side-copy,.side-stats,.side-bottom{display:none}.sidebar .side-label{display:none}.content{padding:0 20px 28px}.topbar{padding:17px 0}.hero{padding:28px 0 18px}.card{grid-template-columns:44px minmax(0,1fr);gap:12px}.icon{width:42px;height:42px}.actions{grid-column:2;flex-direction:row}.actions .btn{flex:1}.controls{grid-template-columns:1fr}}
+@media(max-width:480px){.content{padding:0 14px 24px}.summary{align-items:flex-start;flex-direction:column}.top-pill{display:none}.card{padding:13px}.card h2{font-size:.94rem}.filename{font-size:.75rem}.actions .btn{font-size:.72rem;padding:10px 7px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="page">
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-mark">▤</span><span>Template Library</span></div>
+    <div class="side-rule"></div>
+    <div class="side-label">Public resource collection</div>
+    <div class="side-title">CSS<br>Template<br>Library</div>
+    <p class="side-copy">Browse CSS templates for web development.</p>
+    <div class="side-stats"><strong>13</strong><span>Templates<br>in the collection</span></div>
+    <div class="side-bottom">Customisable<br>Downloadable format<br>Open Source</div>
+  </aside>
+  <div class="content">
+    <div class="topbar"><div class="breadcrumb">Library / <strong>All documents</strong></div><div class="top-pill">Public resource collection</div></div>
+    <header class="hero">
+      <div class="eyebrow">Browse the library</div>
+      <h1>CSS Template Library</h1>
+      <p>Browse CSS templates for web development.</p>
+      <div class="stats"><span class="pill">Customisable</span><span class="pill">Downloadable format</span><span class="pill">Open Source</span></div>
+    </header>
+    <main>
+      <div class="controls">
+        <input id="search" type="search" placeholder="Search documents…" aria-label="Search documents">
+        <select id="category" aria-label="Filter by category"><option value="">All categories</option></select>
+      </div>
+      <div class="summary"><span id="count">Showing all files</span><span>Choose View to open the file or Download to save it.</span></div>
+      <section id="grid" class="grid" aria-live="polite"></section>
+      <div class="note"><strong>Viewing note:</strong> GitHub Pages serves the original DOCX files for download. The View button opens Microsoft's online document viewer; preview availability may depend on the document being publicly reachable and Microsoft's service.</div>
+    </main>
+    <footer>Public CSS library.</footer>
+  </div>
+</div>
+<script>
+const documents = [
+  {"file":"CSS Template for simple website.docx","title":"CSS Template for simple website","category":"Simple Website"},
+  {"file":"CSS Template for Chat module.docx","title":"CSS Template for Chat module","category":"Chat module CSS"},
+  {"file":"CSS Template to display HTML 5.docx","title":"CSS Template to display HTML 5","category":"Node.js CSS"},
+  {"file":"CSS Template for Simple Template for Calculator.docx","title":"CSS Template for Calculator","category":"Calculator"},
+  {"file":"CSS Template for Visit counter.docx","title":"CSS Template for Visit counter","category":"Visitor Counter"},
+  {"file":"CSS Template for voting.docx","title":"CSS Template for voting","category":"Voting"},
+  {"file":"CSS Template for Password.docx","title":"CSS Template for Password","category":"Password"},
+  {"file":"CSS Template for Rating.docx","title":"CSS Template for Rating","category":"Star Rating"},
+  {"file":"CSS Template for docker registration form.docx","title":"CSS Template for Docker Registration Form","category":"Docker & Deployment"},
+  {"file":"CSS Template for form validation.docx","title":"CSS Template for form validation","category":"Form Validation"},
+  {"file":"CSS Template for CMS using Drag & Drop.docx","title":"CSS Template for CMS using Drag & Drop","category":"CMS"},
+  {"file":"CSS Template for Grocery Delivery.docx","title":"CSS Template for Grocery Delivery","category":"Grocery"},
+  {"file":"CSS Template for Furniture Website.docx","title":"CSS Template for Furniture Website","category":"Furniture"}
+];
+const grid=document.getElementById('grid'),search=document.getElementById('search'),category=document.getElementById('category'),count=document.getElementById('count');
+[...new Set(documents.map(d=>d.category))].sort().forEach(name=>{const o=document.createElement('option');o.value=name;o.textContent=name;category.appendChild(o)});
+function render(){
+ const q=search.value.trim().toLowerCase(),selected=category.value;
+ const filtered=documents.filter(d=>(d.title+' '+d.file+' '+d.category).toLowerCase().includes(q)&&(!selected||d.category===selected));
+ count.textContent=`Showing ${filtered.length} of ${documents.length} documents`;grid.innerHTML='';
+ if(!filtered.length){grid.innerHTML='<div class="empty">No documents match your search. Try another keyword or category.</div>';return}
+ filtered.forEach(doc=>{
+  const path='documents/'+encodeURIComponent(doc.file).replaceAll('%2F','/');
+  const absolute=new URL(path,window.location.href).href;
+  const view='https://view.officeapps.live.com/op/view.aspx?src='+encodeURIComponent(absolute);
+  const card=document.createElement('article');card.className='card';
+  card.innerHTML='<div class="icon" aria-hidden="true">▤</div><div class="card-main"><h2></h2><span class="tag"></span><p class="filename"></p></div><div class="actions"><a class="btn btn-view" target="_blank" rel="noopener noreferrer">View ↗</a><a class="btn btn-download">↓ Download</a></div>';
+  card.querySelector('h2').textContent=doc.title;card.querySelector('.tag').textContent=doc.category;card.querySelector('.filename').textContent=doc.file;
+  const v=card.querySelector('.btn-view');v.href=view;v.setAttribute('aria-label','View '+doc.title);
+  const d=card.querySelector('.btn-download');d.href=path;d.download=doc.file;d.setAttribute('aria-label','Download '+doc.title);
+  grid.appendChild(card);
+ });
+}
+search.addEventListener('input',render);category.addEventListener('change',render);render();
+</script>
+</body>
+</html>
